@@ -1,0 +1,2 @@
+As you navigate through this makeshift blog, please don’t hesitate to reach out to correct, criticize, or complement. My first accepted pull request involved simple grammar fixes, but I was still overjoyed at contributing to the “open source” community. You can submit your own requests to this blog at this repository: https://github.com/rhoughton/Like2Learn 
+If you like to learn about technology, and can bear with me as I share stories from teaching and family life, then this is the blog for you!  
