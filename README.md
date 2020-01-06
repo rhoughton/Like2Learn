@@ -6,4 +6,4 @@ This blog and the associated code is the result of the many shortcuts and clarif
 <b>I like to think of myself as a "space bar warrior" on youtube, I watch videos and use the spacebar to ask and answer questions, and I make videos that requre ample use of the space bar for the same reason! </b>
 
 
-<img src="images/awesome.jpg" width="140" height="140">
+<img src="images/hitteinTheBooks.png" width="140" height="140">
