@@ -1,1 +1,13 @@
-test
+https://splintercod3.blogspot.com/p/weaponizing-mapping-injection-with.html 
+*lessons for my cybersecurity students, click the article to read then answers questions
+
+Weaponizing Mapping Injection
+
+What is a “process injection?”
+How are detection of such injections achieved?
+What are some ways to avoid these?
+
+A technique for hiding malicious code behind "normal" processes.
+Using a hooking DLL
+
+
