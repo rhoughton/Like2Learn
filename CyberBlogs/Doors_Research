@@ -1,0 +1,31 @@
+https://www.ibm.com/support/knowledgecenter/en/SSYQBZ_9.6.1/com.ibm.doors.requirements.doc/topics/c_welcome.html
+
+What does DOORS stand for?
+What's "built in" to DOORS?
+What's possible with the Test Tracking toolkit?
+OSLC?
+
+Dynamic Object Oriented Requirements System 
+A "built in" database
+Allows you to link requirements to test cases
+Open Services for Lifecycle Collaboration. 
+
+*that's just the first page to their site, here is the User Manual:
+https://www.ibm.com/support/knowledgecenter/SSYQBZ_9.6.1/com.ibm.rational.doors.integrating.doc/topics/doorsrmf_user_guide.pdf
+
+The site doesn't explain this acronym: IRDRMFAO?
+What's this FAO adding? 
+What 3 types of links can exist?
+
+
+But a manual explaining ITER requirements does: 
+(IBM Rational DOORS Requirements Management Framework Add-On)
+A process, data model and utilities are added to achieve a methodology in compliance with several standards.
+3 links: allocated by, justified by, and refers to. There's a bonus! 'verifies' for validation testing
+
+
+General Notes
+-semantically no difference between 'module type' and 'template.'
+
+*The ITER manual was so cool I decided to make another seciton on just it: 
+https://fusionforenergy.europa.eu/downloads/procurements/itercalls/434.pdf
