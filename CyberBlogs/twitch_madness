@@ -1,8 +1,67 @@
 8/12 Weds :: 18:36 :: NCommander
--MS-DOS 4.0 and PC DOS 4.0 worst dos version
--inner ring of floppy disks typically not used
--smartmon didn't ship with windows... I asked if it was an ancestor to resmon
--courier new is a monospace font?
--INF files used to install components for a device when it needs 1 or more drivers and/or needs device specific configs
--stands for "information" b/c it's setupt information.
-x
+MSDOS 4.0 and PC DOS 4.0 worst dos version
+inner ring of floppy disks typically not used
+smartmon didn't ship with windows... I asked if it was an ancestor to resmon
+courier new is a monospace font?
+INF files used to install components for a device when it needs 1 or more drivers and/or needs device specific configs
+stands for "information" b/c it's setupt information.
+
+8/14 Fri ::10:35:: no one, prepping for cVlad
+if Nix builds packages without dependencies, would this mean a lot of memory is "wasted" b/c code in one package is being reprouced in another?
+so it's a simple tradeoff between Nix and Win w/ DLL/COMs or Ubuntu with PPA?
+
+misc 
+ASP stands for Active Server packages
+.NET framework is the successor to this ^
+What's CLR (common language runtime?)
+whatever it is, coders can use this runtime to write asp.net code using any language... ? so does that mean if I use c# the CLR will translate it to asp.net then compile?
+a .cs file is c# duh! 
+kotlin mainly targets JVM, but can compile to JS (via LLVM) this backend compiler has shown up several times to me in the last few days!
+so kotlin is to Java, like purescript / typescript is to JS?
+
+
+
+IBMdeveloper
+k9s does a great job of getting info to you (from kubelets?)
+default namespace? 
+AWX provides a webbased ui, REST API, & task engine built on ansible
+what's a task engine?
+ansible is a powerful cli tool?
+ansible tower is a framework
+role based access control, push button delpoyment...
+says he will use awx NOT tower
+awx is the upstream version of tower... 
+
+JoshVarty
+add / soft max in Kernels
+local executor?
+orange means tensor flow, blue xla....
+LLVM is the backend of Clang, so LLVM is doing the optimization 
+feeds and fetches all about inputs and outputs
+fee input
+fetch output
+tf is json, json all the way down
+you build (with caffe) json to run your program lol nobody wants to write json as code
+what's bazel? syntactic sugar...
+"ahead of time" is diff than the concept of jit (just in time) windows
+
+cVlad
+ghc = glasgow haskell compiler
+x :: Sum '[Int, Bool, Float]
+x = Inj True
+category theory
+phantom types
+great example, usr names and pswds may be strings as runtime but compile time they are different so you get compile safety
+scala is hard to read
+so cs has monads? "Either" checking for nulls or errors
+
+strawberryhacker
+SAM e70 arm cortez m7 processor
+SAME70Q21b 
+zero length packet = zlp
+A pipe is a method used to pass information from one program process to another
+in this case I think it's from usb (like a mouse) to the chip (directly to the chip?)
+
+
+
+
