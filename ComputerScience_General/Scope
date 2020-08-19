@@ -1,0 +1,8 @@
+https://en.wikipedia.org/wiki/Scope_%28computer_science%29
+
+Describe scope using the word "name binding."
+Especially in older technical literature, what's scope also known as?
+
+
+When a name binding occurs, like when assigning a value to a variable, scope is the region of the computer this association exists. The region can be referred to as a the scope block, other regions outside of scope may have a different binding or none at all (unbound).
+Scope is also known as visibility, as in the visibility of an entity. 
