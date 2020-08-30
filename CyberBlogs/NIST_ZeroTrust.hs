@@ -1,22 +1,22 @@
 NIST zero trust architecture
 -zt = no implicit trust based on location
-Q: What types of resources will zt protect?
+Q: what types of resources will zt protect?
 --A: serices, network accounts, assets(applications?)
 -focus = data & service protection
-Q: What are some other examples of assets?
+Q: what are some other examples of assets?
 --A: devices, ...virtual and cloud components
 -stop = data beaches & lat mvmt 
-Q: These principles can guide what?
+Q: these principles can guide what?
 --A: system design, and operations.
 ---Q: What's in FIPS 199?
 
 Part 2 Tenets of Zero Trust
 -TIC & Firewalls = protection limited to outside the network
-Q: What does PDP and PEP stand for?
+Q: what does PDP and PEP stand for?
 --A: policy decision point, policy envorcement point. 
-Q: What is an analogy for the implicit zone of trust?
+Q: what is an analogy for the implicit zone of trust?
 --Airport security, PDP/PEP is the security checkpoint
-Q: Name some tools used to implement a dynamic policy based on previously observed behavior?
+Q: name some tools used to implement a dynamic policy based on previously observed behavior?
 A: subject and device analytics as well as measured deviations from observed usage patterns.
 
 
