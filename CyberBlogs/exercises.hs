@@ -61,6 +61,7 @@ toCamelCase ("_",x | "-",x) |
         else [c]
     = toUpper x : toCamelCase cs
 toCamelCase (c:cs) = c : toCamelCase cs
+--list comprehension 1. generators 2. guards 3. local bindings 4. targets
 
 
 

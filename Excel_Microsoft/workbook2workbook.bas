@@ -3,4 +3,5 @@ sub wb2wb
 'workbooks don't need to be macro enabled!
 
 Workbooks("myCopy.xlsx").Worksheets("Export").Range("A1:D9").Copy 
-    Workbooks("myOtherCopy.xlsx").Worksheets(4).Range("A1")
+    Workbooks("myOtherCopy.xlsx").Worksheets(4).Range("A1").PasteSpecial Paste:xlPasteValues
+
