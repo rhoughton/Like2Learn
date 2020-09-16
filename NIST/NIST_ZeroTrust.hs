@@ -53,7 +53,7 @@ Q: what are 3 approaches to ZTA for workflows?
 -know your: SDP, SDN, and IBN (intent based networking) concepts.
 -research what an overlay network refers to. 
 
-Part 5 ? p. 22 
+Part 5 Deployment Models p. 22 
 -intermediate certificates 
 -certificate authorities
 -organizations can use multiple models of ZTA
