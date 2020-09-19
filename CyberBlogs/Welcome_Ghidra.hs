@@ -13,3 +13,7 @@ Q: Why is it helpful that imported bytes can be tracked back to their offset in 
 --A: So the modified bytes can be exported into the original file.
 -What are floating point Neon instructions?
 -data types can float after renaming a parameter
+
+symbols are references to some type of data like an import, a global variable or a function.
+
+From the command line I can just type ./ghidraRun and be good to go. 
