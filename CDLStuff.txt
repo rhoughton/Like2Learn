@@ -1,0 +1,27 @@
+I can not access Google Docs this way, you'll have to download a pdf and upload to Buzz.
+You can do this by going to the top left of your Google Doc, selecting File > Download > PDF and resubmit so I can re-grade. 
+
+Unit 1 Critical Thinking Questions
+People often face challenges at some point during their lives that make everyday tasks more difficult. Perhaps they break their leg or injure their hand, impeding their mobility. Maybe they lose part of their cognitive functioning for a period. Others must deal with various disabilities for their entire life. Consider three different challenges a person might face - either for a short or long period of time. For each one, can you think of two different technologies that could offer assistance?
+Can you imagine what life might have been like before the internet, laptops, and smartphones were part of everyday life? What are some ways that life was better, worse, or just different?
+Describe at least three specific ways new technology has changed your education from that of a student 25 years ago.
+Think about what life would be like for someone your age who did not have access to the internet at home or at school and who did not own a smartphone, tablet, laptop, or computer. What kinds of challenges might they face?
+Based on the changes you’ve seen in your lifetime, propose three technological innovations or changes in the way we think about technology that you believe will be introduced within the next five years. The innovations should cover the following three spheres: business/management, social/everyday life, and a major U.S. institution (such as the economy, health care, education, the criminal justice system, etc.). You can include both things you think are positive and things you think are negative in your answer.
+
+unit 1 Lab : Towers of Hanoi
+step 1 
+screenshots
+Step 2 
+write an algorithm with clear, numbered steps that would guide another player through the steps of solving the puzzle.
+Here is a clue to get you started: The first step should be: move the smallest ring to the middle peg.
+Step 3
+After you write the algorithm, write a few sentences reflecting on your experience: What was tricky about writing the algorithm? Did you find that having a written algorithm made it easier to solve the puzzle? Why or why not?
+Step 4
+Do some online research and discover another famous algorithm or coding puzzle to share. Write a brief summary of the puzzle, as well as what you find interesting about it. Include the link to the source where you found the puzzle.
+
+Alternative, can you listen to the podcast found at the end of the unit, and take notes? Notes can be vocab definitions, reflections & personal thoughts and/or questions you have.
+
+Unity Notes
+inspector view = position, collision, results of crash, etc of an object
+console view = all the assets in the project
+hierarchy view = what's in your current scene (or level)
