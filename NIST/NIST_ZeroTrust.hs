@@ -66,19 +66,53 @@ Q: what type of model is used when hosting resources on a cloud?
 -individual resource protection can be an issue using this model 
 Q: What is the one downside to using a application sandboxes?
 --the PEP isn't scanning the device, so though threats exist and can't interact with apps, they still exist unknown to the org...
-
-
-
 PEP -> PA -> PE ---
         agent<-- "configs"
         ---> trust zone 
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf 
+
+Part 6 Trust Algorithm Data Sources pg.17
+policy engine = brain
+trust algo = primary thought 
+What ultimately grants access to a resource?
+--trust algo (TA)
+What variables are considered during ACCESS REQUEST? 
+--requestor info like OS version, software used to make the request, path level, etc? or no? SECURITY POSTURE
+What is a "role?"
+--collection of priviliges 
+What is in a subject database?
+--past behavior, time, geolocation, 
+What is in the asset database? 
+--OS version, software present on asset, integrity(?), location: network & geo, & patch level.
+resource requirements = minimum levels for access e.g. MFA network location, data sensitivity(?), asset configs 
+How is the weight of each data source determined? 
+--creator(s) of the algorithm determine it, and/or your organization can configure it
+
+Part 7 Trust Algorithm Variations pg. 19 / 28 in pdf
+What are the 2 differing characteristics of a TA?
+--evaluating factors vs. evaluating requests 
+Describe criteria vs score
+--criteria configured for every resource, or a score computed based on values obtained from data sources (like we covered above?)
+Why is a singular TA awful?
+--b/c history matters! else we are doomed to repeat the bad...
+Describe a contextual based TA:
+--using information from the PE, a break in the pattern of past behavior may trigger a denail to a resource
+Trust Algorithms help us not rely on human administrators 
+
+Acronyms 
+PA = policy administrator
+SIEM = Security Information and Event Monitoring
+ trust algorithm (TA)
 
 
 
-
-
-
-
+TODO: SP 800-63
+[SP800-162] [NISTIR 7987]
+Comments on this publication may be submitted to:
+National Institute of Standards and Technology
+Attn: Advanced Network Technologies Division, Information Technology Laboratory
+100 Bureau Drive (Mail Stop 8920) Gaithersburg, MD 20899-8920
+Email: zerotrust-arch@nist.gov 
 
 TODO::Whats FICAM TIC and CDM?
 pg. 22 "could be set up lower of the" 
@@ -89,8 +123,10 @@ pg. 18 "e.g. CDM systems, threat intelligence services, etc described below"
 nit pick: ?pg. 19 "e.g., FISMA, healthcare.."
 should be: "FISMA, DOD" 
 
-Comments on this publication may be submitted to:
-National Institute of Standards and Technology
-Attn: Advanced Network Technologies Division, Information Technology Laboratory
-100 Bureau Drive (Mail Stop 8920) Gaithersburg, MD 20899-8920
-Email: zerotrust-arch@nist.gov 
+To update Windows Server go to server manager console. From the Dashboard click local server, the update settings are likely to be "Check for updates but let me choose whether to downlaod and install them" under the Choose your Windows Update settings. Click ok with this setting and now Checking for Updates loading bar will pop up. X number of important updates will be available, click that.
+Choose security Update for Windows Server 2012 R2 (KB___?)
+Now choose the option to restart.
+Don't kill the computer why it's restarting, file corruption/loss can occur. Several reboots may be necessary. 
+
+I know you guys probably don't automatically download updates b/c they can break development environments but at least dowload the security related ones right! Today is Sept 25th, the Aug 11th update was over a month ago I can't imagine an org waiting more than a week before ok'ing a sec update! 
+I mean should I put that on my todo list each month, every Patch Tuesday look at the security update, assess whether that'll break dev then make  recommendation to apply? Hopefully all done by the end of the week? 
