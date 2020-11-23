@@ -47,17 +47,6 @@ Remote Procedure Call (RPC) is a protocol that one program can use to request a 
 
 RPC uses the client-server model. The requesting program is a client, and the service-providing program is the server. Like a regular or local procedure call, an RPC is a synchronous operation requiring the requesting program to be suspended until the results of the remote procedure are returned. However, the use of lightweight processes or threads that share the same address space enables multiple RPCs to be performed concurrently.
 
-CONTENT CONTINUES BELOW
-DOWNLOAD THIS FREE GUIDE
-
-Your Complete Guide to API Design and Management
-APIs allow organizations new and old, large and small to drastically improve the speed and efficiency of their operations, but getting to this point with APIs can be difficult. Read this guide to learn our experts’ best practices for designing and managing APIs.
-
-Corporate E-mail Address:
-
-I agree to TechTarget’s Terms of Use, Privacy Policy, and the transfer of my information to the United States for processing to provide me with relevant information as described in our Privacy Policy.
-
-I agree to my information being processed by TechTarget and its Partners to contact me via phone, email, or other means regarding information relevant to my professional interests. I may unsubscribe at any time.
 The interface definition language (IDL) -- the specification language used to describe a software component's application programming interface (API) -- is commonly used in Remote Procedure Call software. In this case, IDL provides a bridge between the machines at either end of the link that may be using different operating systems (OSes) and computer languages.
 
 RPC message procedure

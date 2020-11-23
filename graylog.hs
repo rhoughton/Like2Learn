@@ -72,7 +72,6 @@ password_secret = whatever you get from: pwgen -N 1 -s 96
 now for the root_password_sha2 = whatever you get from:  
 echo "admin" | sha256sum
 
-
 chkconfig --add graylog-server
 systemctl daemon-reload
 systemctl enable graylog-server
@@ -97,5 +96,119 @@ https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-7.9.3-x86
 establish ssh / ncat ability for centos:
 I had to use a bridged adapter, I kept promiscious mode to deny, now ssh no prob. 
 
-now to copy and paste, I had to create a virtual frame buffer so I can copy and paste (which relies on a graphical dependency)
+to create a virtual frame buffer so I can copy and paste (which relies on a graphical dependency)
 yum install xorg-x11-server-Xvfb
+
+Graylog: Arch Considerations 
+
+Where are ingested messages stored?
+--only in Elasticsearch
+
+How bad would loosing an Elasticsearch cluster be? 
+--horrible, unless you have baks of indices
+
+What can a load balancer do in a bigger production setup?
+--ping graylog nodes to see if alive, then take dead ones out. 
+
+fastest machine data processing engine on the planet
+
+What's another name for the syslog stream? 
+--message cloud
+
+What effects "seek time?"
+--the location of the write "needle"
+
+Why is putting the journal on disk in append only format (similar to Linkedin via Apache Kafka) a great idea?
+--b/c messages won't get droped during spikes 
+
+Disruptor library from LMAX (high speed trading company)
+
+Messages written into process buffer (ring). 
+
+Describe the CPU intensive part of the processing chain:
+--msgs in the process buffer go through stream routing (?) and fields are extracted then sent to Elasticsearch(ES)
+
+Where can fine tuning happen?
+--processors per buffer (they should never exceed the # of cpu cores available)
+
+What should happen if you see low throughput?
+    --increase # of processors in process buffer NOT output buffer.
+
+What's Mongo used for?
+--storying metadata like users, settings, and configs on streams, dashboards, extrators, etc. 
+
+Suggestion: run 3 instances 
+
+How does graylog connect to ES? 
+--as an embedded node that doesn't share data 
+
+What are shards good for?
+--fast searches 
+
+Which questions should you ask when designing an index model?
+--How much data do I have? How far back do I normally search? The answers will determine the size you make your indexes (which are then sharded). 
+
+What is the deflector?
+--an index alias ''
+
+Reading Graylog docs part 2 
+"Planning Log Collection"
+-Guide 1st time users-
+-use virt mach appliances (I editied!)-
+-WARNING: appliances for PoC, labs, etc. not used in prod
+
+What is 1 reason to go with a minimalist design? 
+--performance (system and query)
+
+What are some examples of "critical resources" that event sources are based on?
+--LDAP server, Local servers, firewalls, network devices and key applications
+
+Understanding the answer to these 2 questions is critical: 
+1. What method does each event source use?
+2. What resources are required? 
+
+What is a log shipper?
+--An applicaiton that reads logs from a local file on all servers (vet this before using)
+
+What can you find at the graylog marketplace?
+--plugins, content packs, GELF libraries, etc.
+
+What are the 2 ways to retain logs?
+--online or archived 
+
+Describe the diff between online vs archived?
+--Online is via Elasticsearch & you get to use the GUI, archive is compressed on graylog server or a file share but no GUI unless "reconstituted" 
+
+What does this equation mean: GB/day x Ret. Days x 1.3 = storage req?
+--You take the GB a day you log, multiply this by the retention your team decides on, then add a little to account for meta data. 
+
+For example 5GB x 90 x 1.3 = 585 GB
+ 780 GB x 75% = 585
+
+Notes on the Config section: 
+ Why shouldn't you use an appliance in production? 
+ --very UNSECURE
+
+ What is SLES (OS package)? 
+--?
+
+What config mgmt tools are supported?
+--chef, puppet, ANSIBLE
+
+Should you use the same password_secret (64+ chars) on all graylog server nodes?
+--yes! 
+
+What is Lucene?
+--? 
+
+What do content packs provide?
+--imports/exports of entire dashboards! 
+--alerts!~
+
+do I have to do this everytime I fire up the vm?
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service 
+systemctl enable graylog-server
+systemctl start graylog-server 
+
+Part 3 Collect Messages 
