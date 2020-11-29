@@ -1,4 +1,9 @@
-Graylog 
+do I have to do this everytime I fire up the vm?
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service 
+systemctl enable graylog-server
+systemctl start graylog-server 
+
 powered by elastic search (stores then queries)
 applications typically output through stdout
 which can be cached using a docker driver
@@ -205,10 +210,86 @@ What do content packs provide?
 --imports/exports of entire dashboards! 
 --alerts!~
 
-do I have to do this everytime I fire up the vm?
-systemctl enable elasticsearch.service
-systemctl start elasticsearch.service 
-systemctl enable graylog-server
-systemctl start graylog-server 
+Graylog Docs pt 3 Downloading & Installing 
+https://docs.graylog.org/en/3.3/pages/getting_started/download_install.html 
 
-Part 3 Collect Messages 
+What's SLES?
+--? 
+
+what 2 files will you need to edit right after installation? 
+--server.conf and elasticsearch.yml 
+
+**DO NOT DO THIS STEP after the Virtual Appliance install***
+
+Why do you need a master graylog server node?
+--so it can perform periodical maintenance actions. 
+
+What address is fine for a single development node on a server? 
+--a loopback (127.0.0.1) address 
+
+Part 4 Getting started - the pages  
+
+use the pswd from the pswd secrete you derived 
+
+What are streams?
+--a form of tagging incoming messages 
+
+What are they good for?
+--categorizing! which message -> stream 
+
+Where are messages routed? (logs?)
+--to an index for storage
+
+edit* Streams will also help determine which messages will be archived.
+
+What are some examples of field values?
+--counts, avgs, totals
+
+What's the node page show?
+--detailed health info and metrics 
+
+What 2 types of auth does Graylog support?
+--LDAP & Active Directory 
+
+What does a processing pipeline allow?
+--to run rules against specific events
+
+Where are pipelines tied to?
+--streams!
+
+Give examples of pipeline actions?
+--routing, blacklisting, or modifying messages 
+
+Part 5 collecting messages
+
+What type of file format is used to share content packs?
+--json 
+
+What has to happen if Graylog isn't running as root?
+--you have to use ports higher than 1024 
+
+What cmd can you use to see if traffic is incoming to a particular port?
+    --sudo tcpdump -i lo host 127.0.0.1 and udp port 5014 
+--sudo netstat -peanut | grep ":5014"
+
+Part 6 (but you can watch this in any order) 
+
+Java 11 testers welcome!
+--still true? 11/29/20
+
+Appliance: user ubuntu and the password ubuntu
+
+Maybe I need this:
+/etc/netplan/ (setup fixed IP) 
+/var/lib/graylog-server/firstboot
+-----------
+To update my CentOS:
+$ sudo rpm -Uvh https://packages.graylog2.org/repo/packages/graylog-3.3-repository_latest.rpm
+$ sudo yum clean all
+$ sudo yum install graylog-server
+
+To update plugins:
+sudo yum install graylog-server graylog-enterprise-plugins graylog-integrations-plugins graylog-enterprise-integrations-plugins
+
+What's challenging about using Graylog in Kubernets? 
+--setting the is_master=true in only one node of the cluster 

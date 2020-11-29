@@ -1,3 +1,20 @@
+studying QT framework
+wow this guy says it took an hour to download qT! IDE 
+qT creator :: 
+build is a synonym for compile? 
+--yes... I think! 
+other project > empty qmake project 
+.pro is short for project file 
+looks like this .pro file sits at the top of your repository while other folders like Sources is below. Once a source file like main.cpp exists, the project file will populate with:
+    SOURCES += \
+        main.cpp 
+Is this .pro like a manifest?
+QT += core gui 
+--will bring in core and gui libraries. 
+greaterThan(QT_MAJOR_VERSION, 4) : QT += widgets 
+--we want to use a version greater than 4 and this will be a widget  application 
+
+
 APIs, tools, implementations
 algorithms, protocols, mechanisms(?)
 
