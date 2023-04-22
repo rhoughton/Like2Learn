@@ -5,5 +5,4 @@ This blog and the associated code is the result of the many shortcuts and clarif
 
 <b>I like to think of myself as a "space bar warrior" on youtube, I watch videos and use the spacebar to pause/play while videos while I ask and answer questions in a text document. I also make videos that requre ample use of the space bar typically so students can take a moment to write their answers and thus really absorb the information </b>
 
-
 <img src="hitteinTheBooks.png" width="140" height="140">
